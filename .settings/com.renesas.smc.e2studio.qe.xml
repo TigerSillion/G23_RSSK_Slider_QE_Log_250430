@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<QE>
+    <Segment id="Project">
+        <Setting id="SrcGeneratedPath" value="src/smc_gen"/>
+    </Segment>
+    <Segment id="Pin">
+        <Setting id="P67" value="TS15"/>
+        <Setting id="P34" value="TxDA1"/>
+        <Setting id="P33" value="RxDA1"/>
+        <Setting id="P66" value="TS14"/>
+        <Setting id="P30" value="TSCAP"/>
+        <Setting id="P40" value="TOOL0"/>
+        <Setting id="P73" value="TS05"/>
+        <Setting id="P65" value="TS13"/>
+        <Setting id="P31" value="TS01"/>
+        <Setting id="P64" value="TS12"/>
+    </Segment>
+    <Segment id="Device">
+        <Setting id="Series" value="RL78G2x"/>
+        <Setting id="Group" value="RL78G23"/>
+        <Setting id="Board" value="Custom User Board"/>
+        <Setting id="PartNo" value="R7F100GSNxFB"/>
+        <Setting id="PinCount" value="128"/>
+    </Segment>
+    <Segment id="Clock">
+        <Setting id="EVDD" value="4.0"/>
+        <Setting id="FMAIN" value="32000.0"/>
+        <Setting id="VDD" value="4.0"/>
+        <Setting id="FIL" value="32.768"/>
+        <Setting id="FIHP" value="32000.0"/>
+        <Setting id="FCLK" value="32000.0"/>
+    </Segment>
+    <Segment id="Component">
+        <Setting id="r_bsp" value=""/>
+        <Setting id="r_ctsu" value=""/>
+        <Setting id="Config_UARTA1" value="CG"/>
+        <Setting id="rm_touch" value=""/>
+        <Segment component="r_bsp1.70" id="r_bsp" source="com.renesas.smc.tools.swcomponent.rl78.sis.source">
+            <Setting id="BSP_CFG_PARAM_CHECKING_ENABLE" value="1"/>
+            <Setting id="BSP_CFG_USER_WARM_START_PRE_C_FUNCTION" value="my_sw_warmstart_prec_function"/>
+            <Setting id="BSP_CFG_CLOCK_OPERATION_API_FUNCTIONS_DISABLE" value="1"/>
+            <Setting id="BSP_CFG_SET_CLOCK_SOURCE_API_FUNCTIONS_DISABLE" value="1"/>
+            <Setting id="BSP_CFG_WDT_REFRESH_ENABLE" value="0"/>
+            <Setting id="BSP_CFG_GET_FREQ_API_FUNCTIONS_DISABLE" value="0"/>
+            <Setting id="BSP_CFG_USER_WDT_REFRESH_INIT_FUNCTION" value="my_sw_wdt_refresh_init_function"/>
+            <Setting id="BSP_CFG_INVALID_MEMORY_ACCESS_DETECTION_ENABLE" value="0"/>
+            <Setting id="BSP_CFG_USER_WARM_START_CALLBACK_PRE_INITC_ENABLED" value="0"/>
+            <Setting id="BSP_CFG_SOFTWARE_DELAY_API_FUNCTIONS_DISABLE" value="1"/>
+            <Setting id="BSP_CFG_USER_WDT_REFRESH_SETTING_FUNCTION" value="my_sw_wdt_refresh_setting_function"/>
+            <Setting id="BSP_CFG_CHIP_STATE_CTRL_GUARD" value="0"/>
+            <Setting id="BSP_CFG_CHANGE_CLOCK_SETTING_API_FUNCTIONS_DISABLE" value="1"/>
+            <Setting id="BSP_CFG_DATA_FLASH_ACCESS_ENABLE" value="0"/>
+            <Setting id="BSP_CFG_STARTUP_DISABLE" value="0"/>
+            <Setting id="BSP_CFG_PORT_FUNCTION_GUARD" value="0"/>
+            <Setting id="BSP_CFG_USER_WARM_START_POST_C_FUNCTION" value="my_sw_warmstart_postc_function"/>
+            <Setting id="BSP_CFG_CONFIGURATOR_SELECT" value="1"/>
+            <Setting id="BSP_CFG_USER_WARM_START_CALLBACK_POST_INITC_ENABLED" value="0"/>
+            <Setting id="BSP_CFG_RAM_GUARD_FUNC" value="0"/>
+            <Setting id="BSP_CFG_INT_FUNCTION_GUARD" value="0"/>
+        </Segment>
+        <Segment component="r_ctsu2.10" id="r_ctsu" source="com.renesas.smc.tools.swcomponent.rl78.sis.source">
+            <Setting id="CTSU_CFG_DTC_USE_SC" value="0"/>
+            <Setting id="CTSU_CFG_INTCTSUFN_PRIORITY_LEVEL" value="2"/>
+            <Setting id="CTSU_CFG_INTCTSUWR_PRIORITY_LEVEL" value="2"/>
+            <Setting id="CTSU_CFG_SMS_TRANSFER_ADDRESS" value="0xFF500"/>
+            <Setting id="CTSU_CFG_AJRR_ADDRESS" value="0xFFA00"/>
+            <Setting id="CTSU_CFG_SELF_RAW_ADDRESS" value="0xFF400"/>
+            <Setting id="CTSU_CFG_SMS_ELC_INTP" value="1"/>
+            <Setting id="CTSU_CFG_AJTHR_ADDRESS" value="0xFF600"/>
+            <Setting id="CTSU_CFG_AJMMAR_ADDRESS" value="0xFF700"/>
+            <Setting id="CTSU_CFG_AJBLACT_ADDRESS" value="0xFF800"/>
+            <Setting id="CTSU_CFG_PARAM_CHECKING_ENABLE" value="BSP_CFG_PARAM_CHECKING_ENABLE"/>
+            <Setting id="CTSU_CFG_INTCTSURD_PRIORITY_LEVEL" value="2"/>
+            <Setting id="CTSU_CFG_SMS_EXTRIGGER_BIT" value="1"/>
+            <Setting id="CTSU_CFG_DTC_SUPPORT_ENABLE" value="0"/>
+            <Setting id="CTSU_CFG_MUTUAL_RAW_ADDRESS" value="0xFF500"/>
+            <Setting id="CTSU_CFG_AJBLAR_ADDRESS" value="0xFF900"/>
+            <Setting id="CTSU_CFG_MCACT1_ADDRESS" value="0xFFB00"/>
+            <Setting id="CTSU_CFG_SMS_EXTRIGGER_PORT" value="P14"/>
+            <Setting id="CTSU_CFG_MCACT2_ADDRESS" value="0xFFC00"/>
+            <Setting id="CTSU_CFG_AUTO_JUDGE_ENABLE" value="0"/>
+            <Setting id="CTSU_CFG_CTSUWR_ADDRESS" value="0xFF300"/>
+            <Setting id="CTSU_CFG_SMS_SUPPORT_ENABLE" value="0"/>
+            <Setting id="CTSU_CFG_SMS_CTSUWR_ADDRESS" value="0xFF800"/>
+        </Segment>
+        <Segment component="com.renesas.smc.tools.swcomponent.codegenerator.rl78.uart" id="Config_UARTA1" source="com.renesas.smc.tools.swcomponent.codegenerator.source">
+            <Setting id="rxPriority" value="Level3"/>
+            <Setting id="paritySetting" value="none"/>
+            <Setting id="rxErrorPriority" value="Level3"/>
+            <Setting id="dataLength" value="8bits"/>
+            <Setting id="Mode" value="both"/>
+            <Setting id="CLKAoutput" value="disable"/>
+            <Setting id="transmitMode" value="interrupt"/>
+            <Setting id="elcClockValue" value="32000"/>
+            <Setting id="baudrateSetting" value="115200"/>
+            <Setting id="Operation" value="fsel0"/>
+            <Setting id="rxErrorCallback" value="enable"/>
+            <Setting id="receiveErrorOccur" value="intur"/>
+            <Setting id="stopBitSetting" value="1bit"/>
+            <Setting id="clockSource" value="fihp"/>
+            <Setting id="rxCallback" value="enable"/>
+            <Setting id="directionSetting" value="lsb"/>
+            <Setting id="txPriority" value="Level3"/>
+            <Setting id="txCallback" value="enable"/>
+            <Setting id="dataLevelSetting" value="normal"/>
+        </Segment>
+        <Segment component="rm_touch2.10" id="rm_touch" source="com.renesas.smc.tools.swcomponent.rl78.sis.source">
+            <Setting id="TOUCH_CFG_PARAM_CHECKING_ENABLE" value="BSP_CFG_PARAM_CHECKING_ENABLE"/>
+            <Setting id="TOUCH_CFG_UART_TUNING_SUPPORT" value="1"/>
+            <Setting id="TOUCH_CFG_UART_NUMBER" value="0xA1"/>
+            <Setting id="TOUCH_CFG_UART_MONITOR_SUPPORT" value="1"/>
+            <Setting id="TOUCH_CFG_CHATTERING_SUPPRESSION_TYPE" value="0"/>
+        </Segment>
+    </Segment>
+</QE>
