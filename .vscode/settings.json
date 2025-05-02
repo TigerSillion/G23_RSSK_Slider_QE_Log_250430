@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "rm_touch.h": "c",
+        "rm_touch_api.h": "c",
+        "r_ctsu_api.h": "c"
+    }
+}

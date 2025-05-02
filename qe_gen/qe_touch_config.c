@@ -271,7 +271,7 @@ const touch_slider_cfg_t g_qe_touch_slider_cfg_config02[] =
     {
         .p_elem_index = g_qe_touch_elem_slider_config02_slider00,
         .num_elements = 5,
-        .threshold    = 1807,
+        .threshold    = 800,
     },
 };
 #endif

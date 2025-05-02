@@ -42,6 +42,7 @@
  #endif
 #endif
 
+#include "touch_log.h"
 /***********************************************************************************************************************
  * Macro definitions
  **********************************************************************************************************************/
@@ -566,6 +567,53 @@ const touch_api_t g_touch_on_ctsu =
 
 touch_instance_ctrl_t * gp_touch_isr_context;
 
+// //extern TouchLog_t g_touch_log;
+
+// void update_touch_log(void)
+// {
+//     int i;
+
+//     // /*—— 只有当按钮组存在的时候才赋值 ——*/
+//     // #if (CTSU_CFG_NUM_SELF_ELEMENTS != 0)
+//     // for (i = 0; i < CTSU_CFG_NUM_SELF_ELEMENTS; i++)
+//     // {
+//     //     g_touch_log.button_measurement_value    [i] = g_touch_button_measure[i];
+//     //     g_touch_log.button_baseline             [i] = g_touch_button_base  [i];
+//     //     g_touch_log.button_threshold            [i] = g_touch_button_thres [i];
+//     //     /* … 其他按键字段同理 … */
+//     // }
+//     // #endif
+
+//     /*—— 只有当滑条组存在的时候才赋值 ——*/
+//     #if (TOUCH_CFG_NUM_SLIDERS != 0)
+//     for (i = 0; i < TOUCH_CFG_NUM_SLIDERS; i++)
+//     {
+//         g_touch_log.slider_status       [i] = g_touch_slider_position [i];
+//         g_touch_log.slider_threshold    [i] = g_touch_slider_threshold[i];
+//         g_touch_log.silder_max_data_num [i] = 2;/* 你的代码计算或读取 */;
+//         g_touch_log.silder_d1           [i] = 5;/* … */;
+//         /* … 其余 silder_* 字段 … */
+//     }
+//     /* 如果要给 slider_element 数组赋值： */
+//     for (i = 0; i < TOUCH_CFG_NUM_SLIDERS_ELEMENTS; i++)
+//     {
+//         g_touch_log.slider_element[i] = 100;//g_touch_slider_element[i];
+//     }
+//     #endif
+// }
+
+// g_touch_log.slider_status[0] = g_touch_slider_position[0];
+// //g_touch_log.slider_threshold[0] = g_touch_slider_threshold[0];
+
+// static uint16_t g_touch_slider_position[TOUCH_CFG_NUM_SLIDERS];
+// static uint16_t g_touch_slider_threshold[TOUCH_CFG_NUM_SLIDERS];
+// static uint16_t        g_touch_button_threshold[TOUCH_CFG_NUM_BUTTONS * CTSU_MAJORITY_MODE_ELEMENTS];
+// static uint16_t        g_touch_button_hysteresis[TOUCH_CFG_NUM_BUTTONS * CTSU_MAJORITY_MODE_ELEMENTS];
+// static uint16_t        g_touch_button_reference[TOUCH_CFG_NUM_BUTTONS * CTSU_MAJORITY_MODE_ELEMENTS];
+// static uint16_t        g_touch_button_on_count[TOUCH_CFG_NUM_BUTTONS * CTSU_MAJORITY_MODE_ELEMENTS];
+// static uint16_t        g_touch_button_off_count[TOUCH_CFG_NUM_BUTTONS * CTSU_MAJORITY_MODE_ELEMENTS];
+
+
 /*******************************************************************************************************************//**
  * @addtogroup TOUCH
  * @{
@@ -1007,6 +1055,7 @@ fsp_err_t RM_TOUCH_DataGet (touch_ctrl_t * const p_ctrl,
         {
             sensor_val              = *(g_data + p_slider->p_elem_index[element_id]);
             slider_data[element_id] = sensor_val;
+       //     g_touch_log.slider_value = sensor_val;
         }
 
         touch_slider_decode(&p_instance_ctrl->sinfo, slider_data, p_slider->num_elements, slider_id);
@@ -1092,6 +1141,7 @@ fsp_err_t RM_TOUCH_DataGet (touch_ctrl_t * const p_ctrl,
                     {
                         g_touch_monitor_buf[index++] = (uint8_t) (g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j]);
                         g_touch_monitor_buf[index++] = (uint8_t) (g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j] >> 8);
+                        g_touch_log.button_measurement_value[j] = g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j];
                     }
                 }
             }
@@ -1107,6 +1157,7 @@ fsp_err_t RM_TOUCH_DataGet (touch_ctrl_t * const p_ctrl,
                     {
                         g_touch_monitor_buf[index++] = (uint8_t) (g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j]);
                         g_touch_monitor_buf[index++] = (uint8_t) (g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j] >> 8);
+                        g_touch_log.button_measurement_value[j] = g_data[(i * CTSU_MAJORITY_MODE_ELEMENTS) + j];
                     }
                 }
             }
@@ -1123,10 +1174,12 @@ fsp_err_t RM_TOUCH_DataGet (touch_ctrl_t * const p_ctrl,
                         if (1 == p_instance_ctrl->p_touch_mm_info[i].mm_result[j])
                         {
                             button_all_status |= (uint8_t) (1 << j);
+                            g_touch_log.button_on_off_status[i] |= (uint8_t) (1 << j);
                         }
                         else
                         {
                             button_all_status &= (uint8_t) ~(1 << j);
+                            g_touch_log.button_on_off_status[i] &= (uint8_t) ~(1 << j);
                         }
                     }
 
@@ -1257,7 +1310,6 @@ fsp_err_t RM_TOUCH_DataGet (touch_ctrl_t * const p_ctrl,
     }
  #endif
 #endif
-
     return FSP_SUCCESS;
 }
 
@@ -2513,6 +2565,10 @@ void touch_button_mutual_drift (touch_button_info_t * p_binfo, int16_t value, to
  #endif
 #endif
 
+
+
+extern uint32_t Timer_1ms;
+extern DataPacket_t g_data_packet;
 #if (TOUCH_CFG_NUM_SLIDERS != 0)
 
 /***********************************************************************************************************************
@@ -2629,13 +2685,47 @@ void touch_slider_decode (touch_slider_info_t * p_sinfo, uint16_t * slider_data,
         {
             slider_rpos = (uint16_t) (slider_rpos / num_elements);
         }
+        g_data_packet.slider_on = 1;
     }
     else
     {
         slider_rpos = TOUCH_OFF_VALUE;
+        g_data_packet.slider_on = 0;
     }
 
     *(p_sinfo->p_position + slider_id) = slider_rpos;
+
+    g_data_packet.timestamp = Timer_1ms;
+    g_data_packet.slider_status = slider_rpos;
+    g_data_packet.threshold = *(p_sinfo->p_threshold + slider_id);
+    g_data_packet.Slider_TS0 = slider_data[0];
+    g_data_packet.Slider_TS1 = slider_data[1];
+    g_data_packet.Slider_TS2 = slider_data[2];
+    g_data_packet.Slider_TS3 = slider_data[3];
+    g_data_packet.Slider_TS4 = slider_data[4];
+ //   g_data_packet.Slider_TS5 = slider_data[5];
+    g_data_packet.max_data_num = max_data_num;
+    g_data_packet.d1 = d1;
+    g_data_packet.d2 = d2;
+    g_data_packet.d3 = d3;
+    g_data_packet.dsum = dsum;
+
+
+//    uint32_t timestamp;
+//       uint16_t slider_status;
+//       uint16_t threshold;
+//       uint16_t Slider_TS0;
+//       uint16_t Slider_TS1;
+//       uint16_t Slider_TS2;
+//       uint16_t Slider_TS3;
+//       uint16_t Slider_TS4;
+//       uint16_t Slider_TS5;
+//       uint16_t max_data_num;
+//       uint16_t d1;
+//       uint16_t d2;
+//       uint16_t d3;
+//       uint16_t dsum;
+
 }                                      /* End of function touch_slider_decode() */
 
 #endif                                 // SLIDER_USE

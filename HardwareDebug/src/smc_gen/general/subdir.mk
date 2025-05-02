@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables
 C_SRCS += \
 ../src/smc_gen/general/r_cg_systeminit.c \
+../src/smc_gen/general/r_cg_tau_common.c \
 ../src/smc_gen/general/r_cg_uarta_common.c 
 
 COMPILER_OBJS += \
 src/smc_gen/general/r_cg_systeminit.obj \
+src/smc_gen/general/r_cg_tau_common.obj \
 src/smc_gen/general/r_cg_uarta_common.obj 
 
 C_DEPS += \
 src/smc_gen/general/r_cg_systeminit.d \
+src/smc_gen/general/r_cg_tau_common.d \
 src/smc_gen/general/r_cg_uarta_common.d 
 
 # Each subdirectory must supply rules for building sources it contributes

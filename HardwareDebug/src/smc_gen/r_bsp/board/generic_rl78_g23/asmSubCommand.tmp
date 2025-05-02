@@ -11,5 +11,6 @@
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\HardwareDebug\src\smc_gen\r_ctsu"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\rm_touch"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1"
+-I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_TAU0_1"
 -character_set=utf8
 -g

@@ -34,6 +34,7 @@
         <Setting id="r_bsp" value=""/>
         <Setting id="r_ctsu" value=""/>
         <Setting id="Config_UARTA1" value="CG"/>
+        <Setting id="Config_TAU0_1" value="CG"/>
         <Setting id="rm_touch" value=""/>
         <Segment component="r_bsp1.70" id="r_bsp" source="com.renesas.smc.tools.swcomponent.rl78.sis.source">
             <Setting id="BSP_CFG_PARAM_CHECKING_ENABLE" value="1"/>
@@ -104,11 +105,21 @@
             <Setting id="txCallback" value="enable"/>
             <Setting id="dataLevelSetting" value="normal"/>
         </Segment>
+        <Segment component="com.renesas.smc.tools.swcomponent.codegenerator.rl78.intervaltimer" id="Config_TAU0_1" source="com.renesas.smc.tools.swcomponent.codegenerator.source">
+            <Setting id="InterruptEnable" value="enable"/>
+            <Setting id="IntervalUnit16bits" value="ms"/>
+            <Setting id="Priority" value="Level3"/>
+            <Setting id="FilterMode" value="16bitCountMode"/>
+            <Setting id="OperationClock" value="CK2"/>
+            <Setting id="StartInt" value="disable"/>
+            <Setting id="IntervalValue16bits" value="1"/>
+            <Setting id="ClockSource" value="FCLK64"/>
+        </Segment>
         <Segment component="rm_touch2.10" id="rm_touch" source="com.renesas.smc.tools.swcomponent.rl78.sis.source">
             <Setting id="TOUCH_CFG_PARAM_CHECKING_ENABLE" value="BSP_CFG_PARAM_CHECKING_ENABLE"/>
-            <Setting id="TOUCH_CFG_UART_TUNING_SUPPORT" value="1"/>
+            <Setting id="TOUCH_CFG_UART_TUNING_SUPPORT" value="0"/>
             <Setting id="TOUCH_CFG_UART_NUMBER" value="0xA1"/>
-            <Setting id="TOUCH_CFG_UART_MONITOR_SUPPORT" value="1"/>
+            <Setting id="TOUCH_CFG_UART_MONITOR_SUPPORT" value="0"/>
             <Setting id="TOUCH_CFG_CHATTERING_SUPPRESSION_TYPE" value="0"/>
         </Segment>
     </Segment>

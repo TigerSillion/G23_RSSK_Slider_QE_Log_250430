@@ -49,7 +49,7 @@ extern volatile uint16_t g_uarta1_rx_num;
 extern volatile uint8_t * gp_uarta1_tx_address;
 extern volatile uint16_t g_uarta1_tx_count;
 /* Start user code for global. Do not edit comment generated here */
-extern void touch_uart_callback(uint16_t event);
+//extern void touch_uart_callback(uint16_t event);
 
 /* End user code. Do not edit comment generated here */
 
@@ -74,7 +74,7 @@ void R_Config_UARTA1_Create_UserInit(void)
 static void r_Config_UARTA1_callback_sendend(void)
 {
     /* Start user code for r_Config_UARTA1_callback_sendend. Do not edit comment generated here */
-	touch_uart_callback(0);
+	//touch_uart_callback(0);
 
     /* End user code. Do not edit comment generated here */
 }
@@ -88,7 +88,7 @@ static void r_Config_UARTA1_callback_sendend(void)
 static void r_Config_UARTA1_callback_receiveend(void)
 {
     /* Start user code for r_Config_UARTA1_callback_receiveend. Do not edit comment generated here */
-	touch_uart_callback(1);
+//	touch_uart_callback(1);
     /* End user code. Do not edit comment generated here */
 }
 

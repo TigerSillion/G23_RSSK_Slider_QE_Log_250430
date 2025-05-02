@@ -1,0 +1,19 @@
+{
+    "BUTTON_FIELDS": [
+        "button_measurement_value",
+        "button_baseline",
+        "button_threshold",
+        "button_diff",
+        "button_hysteresis",
+        "button_status"
+    ],
+    "SLIDER_FIELDS": [
+        "slider_status",
+        "slider_threshold",
+        "slider_max_data_num",
+        "slider_d1",
+        "slider_d2",
+        "slider_d3",
+        "slider_dsum"
+    ]
+}

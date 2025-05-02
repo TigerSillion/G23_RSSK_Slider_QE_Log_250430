@@ -29,6 +29,7 @@ Includes
 #include "r_cg_macrodriver.h"
 #include "r_cg_userdefine.h"
 #include "r_cg_uarta_common.h"
+#include "r_cg_tau_common.h"
 /* Start user code for include. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 
@@ -58,4 +59,5 @@ void R_Systeminit(void)
     PRR1 = 0x00U;    /* release DAC, SMS, COMP, ITL, REMC, CTSU module */
     /* Set peripheral settings */
     R_UARTA_Create();
+    R_TAU0_Create();
 }

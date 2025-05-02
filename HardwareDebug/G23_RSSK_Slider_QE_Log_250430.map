@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (V3.05.00 )             01-May-2025 08:22:13
+Renesas Optimizing Linker (V3.05.00 )             02-May-2025 15:28:11
 
 *** Options ***
 
@@ -19,9 +19,12 @@ Renesas Optimizing Linker (V3.05.00 )             01-May-2025 08:22:13
 -input=".\qe_gen\qe_touch_config.obj"
 -input=".\qe_gen\qe_touch_sample.obj"
 -input=".\src\G23_RSSK_Slider_QE_Log_250430.obj"
+-input=".\src/smc_gen/Config_TAU0_1\Config_TAU0_1.obj"
+-input=".\src/smc_gen/Config_TAU0_1\Config_TAU0_1_user.obj"
 -input=".\src/smc_gen/Config_UARTA1\Config_UARTA1.obj"
 -input=".\src/smc_gen/Config_UARTA1\Config_UARTA1_user.obj"
 -input=".\src/smc_gen/general\r_cg_systeminit.obj"
+-input=".\src/smc_gen/general\r_cg_tau_common.obj"
 -input=".\src/smc_gen/general\r_cg_uarta_common.obj"
 -input=".\src/smc_gen/r_bsp/board/generic_rl78_g23\hdwinit.obj"
 -input=".\src/smc_gen/r_bsp/board/generic_rl78_g23\r_bsp_init.obj"
@@ -30,6 +33,7 @@ Renesas Optimizing Linker (V3.05.00 )             01-May-2025 08:22:13
 -input=".\src/smc_gen/r_ctsu\r_ctsu.obj"
 -input=".\src/smc_gen/r_pincfg\r_ctsu_pinset.obj"
 -input=".\src/smc_gen/rm_touch\rm_touch.obj"
+-input=".\src/touch_log\touch_log.obj"
 -library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\rl78em4s99.lib"
 -library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\rl78em4r.lib"
 -library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\malloc_n.lib"
@@ -55,7 +59,7 @@ SECTION                            START      END         SIZE   ALIGN
 .sdata
                                   00000080  00000080         0   2
 .data
-                                  00000082  00000089         8   2
+                                  00000082  00000087         6   2
 .option_byte
                                   000000c0  000000c3         4   1
 .security_id
@@ -65,19 +69,19 @@ SECTION                            START      END         SIZE   ALIGN
 .monitor1
                                   000000ce  000000d7         a   1
 .text
-                                  000000d8  000002b6       1df   1
-.RLIB
-                                  000002b7  00000554       29e   1
-.const
-                                  00003000  000031e5       1e6   2
+                                  000000d8  000002cb       1f4   1
 .textf
-                                  000031e6  00006b14      392f   1
+                                  000002cc  00002fac      2ce1   1
+.const
+                                  00003000  0000319d       19e   2
+.RLIB
+                                  0000319e  00003420       283   1
 .monitor2
                                   000bfe00  000bffff       200   1
 .bss
-                                  000f3f00  000f4395       496   2
+                                  000f3f00  000f4309       40a   2
 .dataR
-                                  000f4396  000f439d         8   2
+                                  000f430a  000f430f         6   2
 .sbss
                                   000ffe20  000ffe20         0   2
 .sdataR

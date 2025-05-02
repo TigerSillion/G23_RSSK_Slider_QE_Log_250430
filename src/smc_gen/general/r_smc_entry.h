@@ -28,9 +28,11 @@
 Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
+#include "Config_TAU0_1.h"
 #include "Config_UARTA1.h"
 #include "Pin.h"
 #include "r_cg_uarta_common.h"
+#include "r_cg_tau_common.h"
 #include "r_cg_userdefine.h"
 
 #ifndef SMC_ENTRY_H

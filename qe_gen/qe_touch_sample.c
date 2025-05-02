@@ -7,14 +7,14 @@
 *
 ***********************************************************************/
 #include "qe_touch_config.h"
-
+#include "r_smc_entry.h"
+#include "touch_log.h"
 
 #define TOUCH_SCAN_INTERVAL_EXAMPLE (20 * 1000)    /* microseconds */
 
 void R_CTSU_PinSetInit(void);
 void qe_touch_main(void);
 void qe_touch_delay(uint16_t delay_us);
-
 
 
 
@@ -27,19 +27,20 @@ uint16_t wheel_position[TOUCH_CFG_NUM_WHEELS];
 #endif
 
 
-
-
+uint32_t Timer_1ms;
+fsp_err_t err;
 
 
 void qe_touch_main(void)
 {
-    fsp_err_t err;
+
 
     BSP_ENABLE_INTERRUPT();
 
     /* Initialize pins (function created by Smart Configurator) */
     R_CTSU_PinSetInit();
-
+    R_Config_UARTA1_Start();
+    R_Config_TAU0_1_Start();
 
 
 
@@ -99,6 +100,8 @@ void qe_touch_main(void)
         }
 
 
+
+         send_data_frame();
 
         /* FIXME: Since this is a temporary process, so re-create a waiting process yourself. */
         qe_touch_delay (TOUCH_SCAN_INTERVAL_EXAMPLE);

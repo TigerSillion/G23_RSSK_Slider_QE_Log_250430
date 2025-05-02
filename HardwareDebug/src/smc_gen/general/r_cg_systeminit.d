@@ -29,3 +29,5 @@ src/smc_gen/general/r_cg_systeminit.obj src/smc_gen/general/r_cg_systeminit.d: .
 ../src/smc_gen/general/r_cg_userdefine.h:
 src/smc_gen/general/r_cg_systeminit.obj src/smc_gen/general/r_cg_systeminit.d: ../src/smc_gen/general/r_cg_uarta_common.h
 ../src/smc_gen/general/r_cg_uarta_common.h:
+src/smc_gen/general/r_cg_systeminit.obj src/smc_gen/general/r_cg_systeminit.d: ../src/smc_gen/general/r_cg_tau_common.h
+../src/smc_gen/general/r_cg_tau_common.h:

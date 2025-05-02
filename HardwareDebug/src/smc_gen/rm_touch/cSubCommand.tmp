@@ -3,6 +3,7 @@
 -dev="C:/Users/a5140073/.eclipse/com.renesas.platform_1297214930/DebugComp/RL78/RL78/Common/DR7F100GSN.DVF"
 -MAKEUD="C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\HardwareDebug\src\smc_gen\rm_touch"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_config"
+-I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\touch_log"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_bsp"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen"
@@ -12,6 +13,7 @@
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\rm_touch"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1"
 -I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\qe_gen"
+-I "C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_TAU0_1"
 -D QE_TOUCH_CONFIGURATION
 -character_set=utf8
 -lang=c99

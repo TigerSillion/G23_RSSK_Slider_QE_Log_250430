@@ -27,6 +27,10 @@ src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_bsp\mcu/rl78_g23/mcu_info.h:
 src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_bsp\board/generic_rl78_g23/hdwinit.h
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_bsp\board/generic_rl78_g23/hdwinit.h:
+src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h
+C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_TAU0_1\Config_TAU0_1.h:
+src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_tau.h
+C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_tau.h:
 src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1\Config_UARTA1.h
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1\Config_UARTA1.h:
 src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_uarta.h
@@ -35,5 +39,7 @@ src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_pincfg\Pin.h:
 src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_uarta_common.h
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_uarta_common.h:
+src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_tau_common.h
+C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_tau_common.h:
 src/G23_RSSK_Slider_QE_Log_250430.obj src/G23_RSSK_Slider_QE_Log_250430.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_userdefine.h
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_userdefine.h:

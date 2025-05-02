@@ -37,11 +37,5 @@ src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_worksp
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_ctsu\r_ctsu.h:
 src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_config\r_ctsu_config.h
 C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\r_config\r_ctsu_config.h:
-src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_macrodriver.h
-C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_macrodriver.h:
-src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_userdefine.h
-C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_userdefine.h:
-src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1\Config_UARTA1.h
-C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\Config_UARTA1\Config_UARTA1.h:
-src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_uarta.h
-C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\smc_gen\general\r_cg_uarta.h:
+src/smc_gen/rm_touch/rm_touch.obj src/smc_gen/rm_touch/rm_touch.d: C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\touch_log\touch_log.h
+C:\e2s_workspace\e2workspace_202307_01\RL78_touch\G23_RSSK_Slider_QE_Log_250430\src\touch_log\touch_log.h:

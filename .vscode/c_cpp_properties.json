@@ -9,10 +9,11 @@
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "QE_TOUCH_CONFIGURATION"
+                "QE_TOUCH_CONFIGURATION",
+                "TOUCH_CFG_NUM_SLIDERS = 1"
             ],
-            "compilerPath": "C:\\ProgramData\\LLVM for Renesas RL78 17.0.1.202412\\bin\\clang.exe",
-            "cStandard": "c17",
+
+            "cStandard": "c99",
             "cppStandard": "c++17",
             "intelliSenseMode": "windows-clang-x64"
         }
